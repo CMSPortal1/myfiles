@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Configuration">
+    <classes>
+      <class name="com.testcases.ESCPortal.Configuration"/>
+    </classes>
+  </test> <!-- Test -->
+
+
+<!-- Login Class-->
+<test thread-count="5" name="Login">
+    <classes>
+      <class name="com.testcases.ESCPortal.Login"/>
+    </classes>
+  </test> <!-- Test -->
+
+<!-- Logo Class-->
+<test thread-count="5" name="Logo">
+    <classes>
+      <class name="com.testcases.ESCPortal.ESC_Logo"/>
+    </classes>
+  </test> <!-- Test -->
+
+<!-- Customer Management Class-->
+<test thread-count="5" name="Customer Management">
+    <classes>
+      <class name="com.testcases.ESCPortal.CustomerManagement">
+		<methods>
+		<include name="Click_cutomermanagement"></include>
+		<!--<include name="Click_Add_Customer"></include>-->
+		<include name="Search_customer"></include>
+		<include name="Select_Customer"></include>
+		</methods>
+	 </class>
+    </classes>
+  </test> <!-- Test -->
+
+<!-- Add subscription email-->
+ <test thread-count="5" name="Add Email Subscription">
+    <classes>
+      <class name="com.testcases.ESCPortal.Add_Email_Subscription">
+		<methods>
+		<include name="Click_Subscription"></include>
+		<include name="Select_Email"></include>
+		<include name="Validate_checkbox_visibiliy"></include>
+	</methods>
+      </class>
+    </classes>
+  </test>
+
+<!-- CMS hidden login-->
+<!--<test thread-count="5" name="CMS hidden login">
+    <classes>
+      <class name="com.testcases.ESCPortal.HiddenLoginCMS">
+	<methods>
+	<include name="CMS_Hidden_Login"></include>
+	</methods>
+      </class>
+    </classes>
+  </test> --><!-- Test -->
+
+</suite> <!-- Suite -->
